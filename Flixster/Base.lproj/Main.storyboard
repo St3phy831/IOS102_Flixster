@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="111" id="Ue7-oV-MR2">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="111" id="Ue7-oV-MR2" customClass="MovieCell" customModule="Flixster" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="111"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ue7-oV-MR2" id="D2Z-oq-K1b">
@@ -38,16 +38,16 @@
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="alS-O1-5Lv">
-                                                            <rect key="frame" x="82" y="0.0" width="279" height="56.666666666666664"/>
+                                                            <rect key="frame" x="82" y="0.0" width="279" height="79"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goQ-l9-Atc">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="279" height="20.333333333333332"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goQ-l9-Atc">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="279" height="42.666666666666664"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEL-Kc-LGv">
-                                                                    <rect key="frame" x="0.0" y="36.333333333333336" width="279" height="20.333333333333336"/>
+                                                                    <rect key="frame" x="0.0" y="58.666666666666679" width="279" height="20.333333333333336"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -67,6 +67,11 @@
                                                 <constraint firstAttribute="bottom" secondItem="Ubq-1T-upd" secondAttribute="bottom" constant="16" id="mA9-P4-Wj9"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="movieDescription" destination="qEL-Kc-LGv" id="50o-tk-IMZ"/>
+                                            <outlet property="moviePoster" destination="c6k-Fk-Lcs" id="Eh3-Zg-JWL"/>
+                                            <outlet property="movieTitle" destination="goQ-l9-Atc" id="n9x-jc-uaQ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
