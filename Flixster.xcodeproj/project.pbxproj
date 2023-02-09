@@ -25,6 +25,7 @@
 		4425465729958BEB005C8BC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4425465929958BEB005C8BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4425465F29958C88005C8BC7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4425466029958D05005C8BC7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +42,7 @@
 		4425463F29958BE8005C8BC7 = {
 			isa = PBXGroup;
 			children = (
+				4425466029958D05005C8BC7 /* .gitignore */,
 				4425465F29958C88005C8BC7 /* README.md */,
 				4425464A29958BE8005C8BC7 /* Flixster */,
 				4425464929958BE8005C8BC7 /* Products */,
