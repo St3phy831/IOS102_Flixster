@@ -13,6 +13,7 @@
 		4425465329958BE8005C8BC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4425465129958BE8005C8BC7 /* Main.storyboard */; };
 		4425465529958BEB005C8BC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4425465429958BEB005C8BC7 /* Assets.xcassets */; };
 		4425465829958BEB005C8BC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4425465629958BEB005C8BC7 /* LaunchScreen.storyboard */; };
+		4425466329958E23005C8BC7 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4425466229958E22005C8BC7 /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4425465929958BEB005C8BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4425465F29958C88005C8BC7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4425466029958D05005C8BC7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		4425466229958E22005C8BC7 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		4425464A29958BE8005C8BC7 /* Flixster */ = {
 			isa = PBXGroup;
 			children = (
+				4425466129958DEA005C8BC7 /* Models */,
 				4425464B29958BE8005C8BC7 /* AppDelegate.swift */,
 				4425464D29958BE8005C8BC7 /* SceneDelegate.swift */,
 				4425464F29958BE8005C8BC7 /* ViewController.swift */,
@@ -69,6 +72,14 @@
 				4425465929958BEB005C8BC7 /* Info.plist */,
 			);
 			path = Flixster;
+			sourceTree = "<group>";
+		};
+		4425466129958DEA005C8BC7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4425466229958E22005C8BC7 /* Movie.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +155,7 @@
 			files = (
 				4425465029958BE8005C8BC7 /* ViewController.swift in Sources */,
 				4425464C29958BE8005C8BC7 /* AppDelegate.swift in Sources */,
+				4425466329958E23005C8BC7 /* Movie.swift in Sources */,
 				4425464E29958BE8005C8BC7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
