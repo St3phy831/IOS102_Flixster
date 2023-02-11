@@ -6,13 +6,29 @@
 //
 
 import UIKit
+import Nuke
 
 class DetailViewController: UIViewController {
-
+    var movie: Movie!
+    
+    @IBOutlet weak var backdropImage: UIImageView!
+    @IBOutlet weak var movieTitle: UILabel!
+    @IBOutlet weak var voteAvg: UILabel!
+    @IBOutlet weak var votes: UILabel!
+    @IBOutlet weak var popularityScore: UILabel!
+    @IBOutlet weak var movieDescription: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        Nuke.loadImage(with: movie.backdrop, into: backdropImage)
+
+        // Set labels with the associated track values.
+        movieTitle.text = movie.title
+        voteAvg.text = String(format: "%.2f", movie.vote_average)
+        votes.text = String(movie.vote)
+        popularityScore.text = String(format: "%.2f", movie.popularity)
+        movieDescription.text = movie.overview
     }
     
 

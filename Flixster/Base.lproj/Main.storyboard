@@ -71,6 +71,7 @@
                                             <outlet property="movieDescription" destination="qEL-Kc-LGv" id="50o-tk-IMZ"/>
                                             <outlet property="moviePoster" destination="c6k-Fk-Lcs" id="Eh3-Zg-JWL"/>
                                             <outlet property="movieTitle" destination="goQ-l9-Atc" id="n9x-jc-uaQ"/>
+                                            <segue destination="TTM-8m-Jbe" kind="show" id="IpM-Lj-Df3"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -103,7 +104,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sY8-pe-zX9">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eac-tI-cH9">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="800"/>
@@ -236,7 +237,16 @@
                             <constraint firstItem="sY8-pe-zX9" firstAttribute="leading" secondItem="kPb-1G-JpH" secondAttribute="leading" id="yVZ-Wp-CRy"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="V7y-iu-1of"/>
                     <size key="freeformSize" width="393" height="852"/>
+                    <connections>
+                        <outlet property="backdropImage" destination="nnJ-nb-6SP" id="jrf-DZ-gQv"/>
+                        <outlet property="movieDescription" destination="qt8-AR-4ho" id="gXi-7i-C8V"/>
+                        <outlet property="movieTitle" destination="4dd-Pm-5Rs" id="X5c-Mt-rYv"/>
+                        <outlet property="popularityScore" destination="WOj-s5-TTJ" id="Muo-Nu-vXO"/>
+                        <outlet property="voteAvg" destination="o0n-cc-t7P" id="ytg-lw-qG6"/>
+                        <outlet property="votes" destination="01n-ri-VUX" id="ycc-vU-VAP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KHO-gn-Xbs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
