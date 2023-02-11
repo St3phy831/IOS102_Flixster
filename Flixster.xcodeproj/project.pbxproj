@@ -16,6 +16,7 @@
 		4425466329958E23005C8BC7 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4425466229958E22005C8BC7 /* Movie.swift */; };
 		4425466529959996005C8BC7 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4425466429959996005C8BC7 /* MovieCell.swift */; };
 		4425466829959E68005C8BC7 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 4425466729959E68005C8BC7 /* Nuke */; };
+		44FED750299832A80035F6B1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FED74F299832A80035F6B1 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		4425466029958D05005C8BC7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		4425466229958E22005C8BC7 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		4425466429959996005C8BC7 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		44FED74F299832A80035F6B1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				4425464B29958BE8005C8BC7 /* AppDelegate.swift */,
 				4425464D29958BE8005C8BC7 /* SceneDelegate.swift */,
 				4425464F29958BE8005C8BC7 /* ViewController.swift */,
+				44FED74F299832A80035F6B1 /* DetailViewController.swift */,
 				4425466429959996005C8BC7 /* MovieCell.swift */,
 				4425465129958BE8005C8BC7 /* Main.storyboard */,
 				4425465429958BEB005C8BC7 /* Assets.xcassets */,
@@ -167,6 +170,7 @@
 				4425465029958BE8005C8BC7 /* ViewController.swift in Sources */,
 				4425464C29958BE8005C8BC7 /* AppDelegate.swift in Sources */,
 				4425466329958E23005C8BC7 /* Movie.swift in Sources */,
+				44FED750299832A80035F6B1 /* DetailViewController.swift in Sources */,
 				4425466529959996005C8BC7 /* MovieCell.swift in Sources */,
 				4425464E29958BE8005C8BC7 /* SceneDelegate.swift in Sources */,
 			);
