@@ -55,5 +55,14 @@ class ViewController: UIViewController, UITableViewDataSource {
             detailViewController.movie = movie
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let indexPath = tableView.indexPathForSelectedRow {
+
+            // Deselect the row at the corresponding index path
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
 }
 
