@@ -164,15 +164,15 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qt8-AR-4ho">
-                                                        <rect key="frame" x="10" y="367" width="373" height="20.333333333333314"/>
+                                                        <rect key="frame" x="15" y="367" width="363" height="20.333333333333314"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="qt8-AR-4ho" firstAttribute="leading" secondItem="pN5-7k-Dpx" secondAttribute="leading" constant="10" id="WbJ-kE-5Jz"/>
-                                                    <constraint firstAttribute="trailing" secondItem="qt8-AR-4ho" secondAttribute="trailing" constant="10" id="geh-RM-aq3"/>
+                                                    <constraint firstItem="qt8-AR-4ho" firstAttribute="leading" secondItem="pN5-7k-Dpx" secondAttribute="leading" constant="15" id="FGA-Ef-ZDu"/>
+                                                    <constraint firstAttribute="trailing" secondItem="qt8-AR-4ho" secondAttribute="trailing" constant="15" id="G63-TH-ve6"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
@@ -181,7 +181,6 @@
                                             <constraint firstItem="pN5-7k-Dpx" firstAttribute="top" secondItem="eac-tI-cH9" secondAttribute="top" id="2EX-nv-t9m"/>
                                             <constraint firstAttribute="trailing" secondItem="pN5-7k-Dpx" secondAttribute="trailing" id="SCE-xb-bEP"/>
                                             <constraint firstItem="pN5-7k-Dpx" firstAttribute="leading" secondItem="eac-tI-cH9" secondAttribute="leading" id="fJO-47-yUs"/>
-                                            <constraint firstAttribute="height" constant="800" id="lOc-os-kBd"/>
                                         </constraints>
                                     </view>
                                 </subviews>
