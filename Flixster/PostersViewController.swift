@@ -93,10 +93,10 @@ class PostersViewController: UIViewController, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        // Get a collection view cell (based in the identifier you set in storyboard) and cast it to our custom AlbumCell
+        // Get a collection view cell (based in the identifier you set in storyboard) and cast it to our custom PosterCell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PosterCell", for: indexPath) as! PosterCell
 
-        // Use the indexPath.item to index into the albums array to get the corresponding album
+        // Use the indexPath.item to index into the movies array to get the corresponding movie
         let movie = movies[indexPath.item]
 
         // Get the poster image url
@@ -106,6 +106,22 @@ class PostersViewController: UIViewController, UICollectionViewDataSource {
         Nuke.loadImage(with: posterUrl, into: cell.posterImage)
 
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the cell that triggered the segue
+        if let cell = sender as? UICollectionViewCell,
+        // Get the index path of the cell from the table view
+        let indexPath = collectionView.indexPath(for: cell),
+        // Get the detail view controller
+        let detailViewController = segue.destination as? DetailViewController {
+            
+            // Use the index path to get the associated movie
+            let movie = movies[indexPath.row]
+
+            // Set the movie on the detail view controller
+            detailViewController.movie = movie
+        }
     }
 
     /*
