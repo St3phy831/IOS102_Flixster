@@ -41,8 +41,26 @@ class ViewController: UIViewController, UITableViewDataSource {
             // The `JSONSerialization.jsonObject(with: data)` method is a "throwing" function (meaning it can throw an error) so we wrap it in a `do` `catch`
             // We cast the resultant returned object to a dictionary with a `String` key, `Any` value pair.
             do {
-                let jsonDictionary = try JSONSerialization.jsonObject(with: data) as? [String: Any]
-                print(jsonDictionary)
+                // Create a JSON Decoder
+                let decoder = JSONDecoder()
+
+                // Use the JSON decoder to try and map the data to our custom model.
+                // TrackResponse.self is a reference to the type itself, tells the decoder what to map to.
+                let response = try decoder.decode(MovieResponse.self, from: data)
+
+                // Access the array of tracks from the `results` property
+                let movies = response.results
+                print("✅ \(movies)")
+                
+                // Execute UI updates on the main thread when calling from a background callback
+                DispatchQueue.main.async {
+
+                    // Set the view controller's tracks property as this is the one the table view references
+                    self?.movies = movies
+
+                    // Make the table view reload now that we have new data
+                    self?.tableView.reloadData()
+                }
             } catch {
                 print("❌ Error parsing JSON: \(error.localizedDescription)")
             }

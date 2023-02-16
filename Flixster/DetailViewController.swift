@@ -24,12 +24,12 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        Nuke.loadImage(with: movie.backdrop, into: backdropImage)
+        Nuke.loadImage(with: URL(image_path: movie.backdrop_path), into: backdropImage)
 
         // Set labels with the associated track values.
         movieTitle.text = movie.title
         voteAvg.text = String(format: "%.2f \(voteAvgString)", movie.vote_average)
-        votes.text = String(movie.vote) + voteString
+        votes.text = String(movie.vote_count) + voteString
         popularityScore.text = String(format: "%.2f \(popularityString)", movie.popularity)
         movieDescription.text = movie.overview
     }
