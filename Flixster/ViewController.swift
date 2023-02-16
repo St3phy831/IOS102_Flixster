@@ -82,10 +82,10 @@ class ViewController: UIViewController, UITableViewDataSource {
         // the `dequeueReusableCell(withIdentifier:)` method just returns a generic UITableViewCell so it's necessary to cast it to our specific custom cell.
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
 
-        // Get the track that corresponds to the table view row
+        // Get the movie that corresponds to the table view row
         let movie = movies[indexPath.row]
 
-        // Configure the cell with it's associated track
+        // Configure the cell with it's associated movie
         cell.configure(with: movie)
 
         // return the cell for display in the table view
@@ -100,10 +100,10 @@ class ViewController: UIViewController, UITableViewDataSource {
             // Get the detail view controller
             let detailViewController = segue.destination as? DetailViewController {
             
-            // Use the index path to get the associated track
+            // Use the index path to get the associated movie
             let movie = movies[indexPath.row]
 
-            // Set the track on the detail view controller
+            // Set the movie on the detail view controller
             detailViewController.movie = movie
         }
     }
