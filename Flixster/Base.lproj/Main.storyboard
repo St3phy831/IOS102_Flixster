@@ -8,6 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Posters-->
+        <scene sceneID="3MR-D7-i93">
+            <objects>
+                <viewController id="qbn-dx-GKZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NOv-0V-Ivl">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vGe-gy-Jhr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Posters" id="OtY-Vc-HXt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JrE-Im-4xl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1966" y="-666"/>
+        </scene>
         <!--Movies-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -252,14 +268,35 @@
                     </tabBar>
                     <connections>
                         <segue destination="fSR-1B-DeY" kind="relationship" relationship="viewControllers" id="nkX-bV-nzx"/>
+                        <segue destination="Yu4-7c-Jqz" kind="relationship" relationship="viewControllers" id="I8s-aC-svW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4xO-m7-VRb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="112.21374045801527" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="10" y="-335"/>
+        </scene>
+        <!--Posters-->
+        <scene sceneID="Z3n-BT-RI0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yu4-7c-Jqz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Posters" image="doc.text.image" catalog="system" id="Pim-UR-7TT"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jcc-jR-BF4">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qbn-dx-GKZ" kind="relationship" relationship="rootViewController" id="JYc-ql-TCz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KnQ-TL-lMM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039" y="-666"/>
         </scene>
     </scenes>
     <resources>
+        <image name="doc.text.image" catalog="system" width="115" height="128"/>
         <image name="film" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
