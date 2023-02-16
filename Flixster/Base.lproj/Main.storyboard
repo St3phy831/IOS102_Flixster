@@ -63,6 +63,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Posters" id="OtY-Vc-HXt"/>
+                    <connections>
+                        <outlet property="collectionView" destination="chu-iF-aBi" id="ZiS-MQ-h0u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JrE-Im-4xl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

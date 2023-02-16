@@ -5,11 +5,13 @@
 //  Created by Stephanie Hernandez on 2/16/23.
 //
 
+import Nuke
 import UIKit
 
-class PostersViewController: UIViewController {
+class PostersViewController: UIViewController, UICollectionViewDataSource {
     var posters: [Poster] = []
-
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,8 +46,12 @@ class PostersViewController: UIViewController {
                     // Try to parse the response into our custom model
                     let response = try decoder.decode(PosterResponse.self, from: data)
                     let posters = response.results
-                    self?.posters = posters
                     print(posters)
+                    
+                    DispatchQueue.main.async {
+                        self?.posters = posters
+                        self?.collectionView.reloadData()
+                    }
                 } catch {
                     print(error.localizedDescription)
                 }
@@ -56,8 +62,29 @@ class PostersViewController: UIViewController {
 
         // Initiate the network request
         task.resume()
+        
+        collectionView.dataSource = self
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return posters.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        // Get a collection view cell (based in the identifier you set in storyboard) and cast it to our custom AlbumCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PosterCell", for: indexPath) as! PosterCell
+
+        // Use the indexPath.item to index into the albums array to get the corresponding album
+        let poster = posters[indexPath.item]
+
+        // Get the artwork image url
+        let posterUrl = URL(image_path: poster.poster_path)
+
+        // Set the image on the image view of the cell
+        Nuke.loadImage(with: posterUrl, into: cell.posterImage)
+
+        return cell
+    }
 
     /*
     // MARK: - Navigation
