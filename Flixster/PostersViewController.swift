@@ -9,7 +9,7 @@ import Nuke
 import UIKit
 
 class PostersViewController: UIViewController, UICollectionViewDataSource {
-    var posters: [Poster] = []
+    var movies: [Movie] = []
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -44,12 +44,12 @@ class PostersViewController: UIViewController, UICollectionViewDataSource {
                 let decoder = JSONDecoder()
                 do {
                     // Try to parse the response into our custom model
-                    let response = try decoder.decode(PosterResponse.self, from: data)
-                    let posters = response.results
-                    print(posters)
+                    let response = try decoder.decode(MovieResponse.self, from: data)
+                    let movies = response.results
+                    print(movies)
                     
                     DispatchQueue.main.async {
-                        self?.posters = posters
+                        self?.movies = movies
                         self?.collectionView.reloadData()
                     }
                 } catch {
@@ -89,7 +89,7 @@ class PostersViewController: UIViewController, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return posters.count
+        return movies.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -97,10 +97,10 @@ class PostersViewController: UIViewController, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PosterCell", for: indexPath) as! PosterCell
 
         // Use the indexPath.item to index into the albums array to get the corresponding album
-        let poster = posters[indexPath.item]
+        let movie = movies[indexPath.item]
 
-        // Get the artwork image url
-        let posterUrl = URL(image_path: poster.poster_path)
+        // Get the poster image url
+        let posterUrl = URL(image_path: movie.poster_path)
 
         // Set the image on the image view of the cell
         Nuke.loadImage(with: posterUrl, into: cell.posterImage)

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		44124A79299EDB0D00946234 /* PostersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44124A78299EDB0D00946234 /* PostersViewController.swift */; };
-		44124A7D299EE2E400946234 /* Poster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44124A7C299EE2E400946234 /* Poster.swift */; };
 		44124A7F299EE5E000946234 /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44124A7E299EE5E000946234 /* PosterCell.swift */; };
 		4425464C29958BE8005C8BC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4425464B29958BE8005C8BC7 /* AppDelegate.swift */; };
 		4425464E29958BE8005C8BC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4425464D29958BE8005C8BC7 /* SceneDelegate.swift */; };
@@ -24,7 +23,6 @@
 
 /* Begin PBXFileReference section */
 		44124A78299EDB0D00946234 /* PostersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostersViewController.swift; sourceTree = "<group>"; };
-		44124A7C299EE2E400946234 /* Poster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poster.swift; sourceTree = "<group>"; };
 		44124A7E299EE5E000946234 /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
 		4425464829958BE8005C8BC7 /* Flixster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flixster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4425464B29958BE8005C8BC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,7 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				4425466229958E22005C8BC7 /* Movie.swift */,
-				44124A7C299EE2E400946234 /* Poster.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,7 +178,6 @@
 				44124A7F299EE5E000946234 /* PosterCell.swift in Sources */,
 				4425466329958E23005C8BC7 /* Movie.swift in Sources */,
 				44FED750299832A80035F6B1 /* DetailViewController.swift in Sources */,
-				44124A7D299EE2E400946234 /* Poster.swift in Sources */,
 				4425466529959996005C8BC7 /* MovieCell.swift in Sources */,
 				44124A79299EDB0D00946234 /* PostersViewController.swift in Sources */,
 				4425464E29958BE8005C8BC7 /* SceneDelegate.swift in Sources */,
