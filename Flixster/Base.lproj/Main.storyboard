@@ -11,7 +11,7 @@
         <!--Posters-->
         <scene sceneID="3MR-D7-i93">
             <objects>
-                <viewController id="qbn-dx-GKZ" sceneMemberID="viewController">
+                <viewController id="qbn-dx-GKZ" customClass="PostersViewController" customModule="Flixster" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NOv-0V-Ivl">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
